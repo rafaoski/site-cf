@@ -1,0 +1,19 @@
+/* --------------------------------
+
+File#: _card
+Title: Card
+Descr: Component Card
+
+-------------------------------- */
+
+.component-card {
+	background: var(--color-white);
+	border-radius: var(--radius-sm);
+	box-shadow: var(--shadow-sm);
+	padding: var(--space-md);
+	transition: all .3s;
+}
+
+.component-card:hover {
+	box-shadow: var(--shadow-lg);
+}

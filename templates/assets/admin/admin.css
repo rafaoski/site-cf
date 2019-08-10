@@ -1,0 +1,8 @@
+.PageListTemplate_blog .icon,
+.PageListTemplate_blog-posts .icon,
+.PageListTemplate_blog-categories .icon,
+.PageListTemplate_blog-tags .icon,
+.PageListTemplate_blog-rss .icon
+{
+	color: black !important;
+}

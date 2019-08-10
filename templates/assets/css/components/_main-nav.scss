@@ -1,0 +1,32 @@
+/* --------------------------------
+
+File#: _main-nav
+Title: Main Nav Menu
+Descr: Simple Scrooling nav menu
+
+-------------------------------- */
+
+.main-nav {
+	overflow: auto;
+	white-space: nowrap;
+}
+
+.main-nav a {
+	margin: 5px;
+}
+
+.main-nav > a {
+	padding: 0 var(--space-xxs);
+	margin: var(--space-xxxxs);
+	line-height: 1;
+	font-size: var(--text-xs);
+	letter-spacing: var(--space-xxxs);
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all .3s;
+}
+
+.main-nav > a.current-item {
+	font-weight: bold;
+	border-bottom: 2px solid;
+}

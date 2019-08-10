@@ -1,0 +1,28 @@
+/* HOME NUM CHILDREN */
+.PageListID1 .PageListNumChildren.detail {
+	display: none;
+}
+
+/* OPTIONS TEMPLATE */
+.PageListTemplate_options {
+	display: none;
+}
+.PageListTemplate_custom_options {
+	display: none;
+}
+
+/* SEARCH */
+.PageListTemplate_search {
+	display: none;
+}
+
+/* 404 */
+.PageListTemplate_404 {
+	display: none;
+}
+
+/* ADMIN */
+.PageListID2 {
+	display: none;
+}
+

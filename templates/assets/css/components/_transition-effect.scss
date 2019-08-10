@@ -1,0 +1,50 @@
+/* --------------------------------
+
+File#: _transition-effect
+Title: Component Transition
+Descr: Element Transitions
+
+-------------------------------- */
+
+.transition-bounce-s {
+	transition: .3s var(--bounce);
+	&:hover {
+		transform: scale(.9);
+	}
+}
+
+.transition-bounce-s-small {
+	transition: .3s var(--bounce);
+	&:hover {
+		transform: scale(.98);
+	}
+}
+
+.transition-ease-in-out-s {
+	transition: .3s var(--ease-in-out);
+	&:hover {
+		transform: scale(.9);
+	}
+}
+
+.transition-ease-in-s {
+	transition: .3s var(--ease-in);
+	&:hover {
+		transform: scale(.9);
+	}
+}
+
+.transition-ease-out-s {
+	transition: .3s var(--ease-out);
+	&:hover {
+		transform: scale(.9);
+	}
+}
+
+.transition-bounce-s-r {
+	transition: .3s var(--bounce);
+	&:hover {
+		transform: scale(.9);
+		transform: rotate(-15deg);
+	}
+}
