@@ -57,17 +57,13 @@ if ($item->id == page('id')) {
 
 	<footer class='margin-y-md'>
 		<?php if ( count($item->categories) ): ?>
-
 			<p class='text-sm'><?= icon('hash', ['width' => 20, 'height' => 20]) ?>
 				<?= $item->categories->each("<a href='{url}'>{title}</a> ") ?></p>
-
 		<?php endif; ?>
 
 		<?php if ( count($item->tags) ): ?>
-
 			<p class='text-sm'><?= icon('maximize', ['width' => 20, 'height' => 20]) ?>
 			<?= $item->tags->each("<a href='{url}'>{title}</a> ") ?></p>
-
 		<?php endif; ?>
 	</footer>
 
