@@ -79,6 +79,15 @@ $wire->addHook('Pages::save', function($event) {
 
 });
 
+// https://processwire.com/docs/modules/hooks/
+wire()->addHookProperty('Page::intro', function($event) {
+	$page = $event->object;
+	$intro = substr(strip_tags($page->body), 0, 255);
+	$lastPeriodPos = strrpos($intro, '.');
+	if($lastPeriodPos !== false) $intro = substr($intro, 0, $lastPeriodPos);
+	$event->return = $intro . ' ... ';
+  });
+
 // https://processwire.com/talk/topic/19250-formbuilder-allow-html-in-label/
 // $wire->addHookAfter("InputfieldCheckbox::render",function($event){
 //     $field = $event->object;
