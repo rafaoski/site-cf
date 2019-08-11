@@ -60,6 +60,7 @@ setting([
 	'no-found' =>  __('Sorry, no results were found.'),
 	'read-more' => __('Read more'),
 	'also-like' => __('You might also like:'),
+	'more-topic' => __('More pages about the topic'),
 // Blog Translation
      'recent-posts' => __('Recent posts'),
 // Comments Form Translation
