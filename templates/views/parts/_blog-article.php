@@ -26,7 +26,7 @@ if ($item->id == page('id')) {
 	$title = "<h3><a title='$item->title' href='$item->url'>$item->title</a></h3>";
 
 // page body
-	$body = '<p>' . $item->render('body', '_text-medium') . '</p>';
+	$body = '<p>' . $item->intro . '</p>';
 
 // read more button
 	$readMore = "<a class='btn btn--primary margin-bottom-md' href='$item->url' title='$textMore'>$textMore</a>";
