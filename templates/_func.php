@@ -643,6 +643,7 @@ $out = '';
  * @param array|string $options Options to modify default behavior:
  *  - `privacy_page` (link): URL to privacy page.
  *  - `read_more` (string): Read more text.
+ *  - `icon` (string): icon name from ( https://feathericons.com/ ).
  *
  */
 function privacyPolicy($privacyPage, $options = array())
@@ -652,12 +653,17 @@ function privacyPolicy($privacyPage, $options = array())
 	// Default Options
 	$defaults = array(
 		'read_more' => setting('read-more'),
+		'icon' => 'info',
 	);
+
 	// Merge Options
 	$options = _mergeOptions($defaults, $options);
-	  return "
+
+	$icon = icon($options['icon'], ['width' => 30, 'height' => 30]);
+
+	return "
 	<span class='privacy-text'>
-		{$privacyPage->meta_title}
+	$icon {$privacyPage->meta_title}
 	</span>
 	<a class='color-warning' href='{$privacyPage->url}'>
 		$options[read_more]
