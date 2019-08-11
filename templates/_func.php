@@ -799,7 +799,8 @@ function toAny($options = array())
  *  - `height` (int): css property height.
  *  - `stroke_width` (int): css property stroke_width.
  *  - `stroke` (string): css property stroke ( color ).
- *  - `text_after` (string): text after link.
+ *  - `text_after` (string): text after icon.
+ *  - `text_before` (string): text before icon.
  *
  */
 function icon($icon, $options = array())
@@ -816,8 +817,9 @@ function icon($icon, $options = array())
 		'width' => 25,
 		'height' => 25,
 		'stroke_width' => 1,
-		'stroke' => 'black',
-		'text_after' => ''
+		'stroke' => '',
+		'text_before' => '',
+		'text_after' => '',
 	);
 	// Merge Options
 	$options = _mergeOptions($defaults, $options);
@@ -827,7 +829,8 @@ function icon($icon, $options = array())
 			  stroke-width: $options[stroke_width];
 			  stroke: $options[stroke]";
 
-	$out .= "<i style='$style' class='feather-icon $options[class]' data-feather='$icon'></i> ";
+	$out .= $options['text_before'];
+	$out .= " <i style='$style' class='feather-icon $options[class]' data-feather='$icon'></i> ";
 	$out .= $options['text_after'];
 
 	return $out;
