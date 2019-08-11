@@ -1,7 +1,7 @@
 <?php namespace ProcessWire; ?>
 
 <?php if (page()->hasChildren): ?>
-<div id='main-content' class='body text-component' data-pw-append>
+<div id='main-content' data-pw-append>
 
 <h3><?= setting('more-topic') ?>:</h3>
 
