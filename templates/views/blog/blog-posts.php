@@ -14,6 +14,9 @@ if( !count($blogPosts) ) {
 // Pagination
 $pagination = pagination($blogPosts);
 
+// Body field
+$content .= page()->body;
+
 // Content articles
 foreach ($blogPosts as $item) {
 	$content .= files()->render('views/blog/parts/_blog-article.php',
