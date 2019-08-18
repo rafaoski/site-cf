@@ -24,7 +24,7 @@ if( setting('gw-code') ) echo gwCode( setting('gw-code')->text_1 );
 			<?php
 			echo langMenu(page(),
 				[
-					'class' => 'main-header__lang-menu padding-sm text-sm margin-bottom-sm',
+					'class' => 'main-header__lang-menu padding-sm text-sm margin-y-md',
 					'style' => 'overflow: auto; white-space: nowrap;'
 				]);
 			?>
