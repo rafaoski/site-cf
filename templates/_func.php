@@ -9,6 +9,7 @@
  *  - `favicon` (url): Favicon url.
  *  - `title` (string): Meta title.
  *  - `description` (string): Meta description.
+ *  - `templates_noindex` (array): Templates to skip in search results.
  *
  */
 function siteHead($options = array())
@@ -25,7 +26,8 @@ function siteHead($options = array())
 		'js' => setting('js-files'),
 		'favicon' => setting('favicon'),
 		'title' => page('meta_title|title'),
-		'description' => page('meta_description')
+		'description' => page('meta_description'),
+		'templates_noindex' => ['blog-categories','blog-category','blog-tags','blog-tag']
 	);
 	// Merge Options
 	$options = _mergeOptions($defaults, $options);
@@ -34,6 +36,10 @@ function siteHead($options = array())
 	$out .= "<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n";
 	$out .= "<link rel='icon' href='$options[favicon]'/>\n";
 	$out .= "<title id='head-title'>$options[title]</title>\n";
+    // No index follow categories or tags
+	if ( in_array( page()->template, $options['templates_noindex']) ) {
+		$out .= "<meta name='robots' content='noindex'>\n";
+	}
 	if( $options['description'] ) {
 	$out .= "<meta id='head-description' name='description' content='$options[description]'/>\n";
 	}
@@ -585,8 +591,8 @@ $options = _mergeOptions($defaults, $options);
 // return search form
 return "
   <form action='$options[search_page]' method='get'>
-	<label style='color: var(--color-bg)' class='form-label color-inherit ' for='q'>$options[search_label]</label>
-	<input type='search' name='q' class='form-control' id='q' placeholder='$options[input_placeholder] &hellip;' required>
+	<label style='color: var(--color-bg); font-size: var(--text-md)' class='form-label' for='q'>$options[search_label]</label><br><br>
+	<input type='search' name='q' class='form-control width-100%' id='q' placeholder='$options[input_placeholder] &hellip;' required>
   </form>";
 }
 
@@ -733,9 +739,9 @@ function socialProfiles($items)
 		$out .= icon($item->name,
 		[
 			'stroke' => 'var(--color-warning)',
-			'stroke_width' => 1.3,
-			'width' => 35,
-			'height' => 35,
+			'stroke_width' => 1,
+			'width' => 48,
+			'height' => 48,
 			'class' => 'transition-bounce-s'
 		]) . "</a>";
 	}

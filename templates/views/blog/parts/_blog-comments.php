@@ -6,16 +6,14 @@
 	$comments = page()->comments;
 	// comment list
 	if (count($comments)) {
-
-			echo page()->comments->render(array(
-				'headline' => '<h3>' . setting('comment-text') . '</h3>',
-				'commentHeader' => sprintf( setting('comment-header'), user()->nick_name, page()->date ),
-				'dateFormat' => 'm/d/y g:ia',
-				'encoding' => 'UTF-8',
-				'admin' => false, // shows unapproved comments if true
-			));
-
-		}
+		echo page()->comments->render(array(
+			'headline' => '<h3>' . setting('comment-text') . '</h3>',
+			'commentHeader' => sprintf( setting('comment-header'), user()->nick_name, page()->date ),
+			'dateFormat' => 'm/d/y g:ia',
+			'encoding' => 'UTF-8',
+			'admin' => false, // shows unapproved comments if true
+		));
+	}
 
 		// comments form with all options specified (these are the defaults)
 		echo $page->comments->renderForm(array(

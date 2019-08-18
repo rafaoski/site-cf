@@ -1,9 +1,19 @@
 <?php namespace ProcessWire;
 
+// Get Rexent Posts
+$recentPosts = pages()->get("template=blog-posts");
+
+// Get categories
+$blogCategories = pages()->get('template=blog-categories');
+
+// Get tags
+$blogTags = pages()->get('template=blog-tags');
+
+
 $out = '';
 
 // Content recent posts
-if( $recentPosts ) {
+if( page() != $recentPosts && page()->template->name != 'blog'  ) {
 
 	$out .= "<!-- RECENT POSTS -->\n" .
 	simpleNav($recentPosts->children('limit=12, start=0'),
@@ -16,7 +26,7 @@ if( $recentPosts ) {
 }
 
 // Content categories
-if( $blogCategories ) {
+if( page() != $blogCategories ) {
 	$out .= "<!-- CATEGORIES -->\n" .
 	simpleNav($blogCategories->children('limit=12, start=0'),
 	[
@@ -27,7 +37,7 @@ if( $blogCategories ) {
 }
 
 // Content tags
-if( $blogTags ) {
+if( page() != $blogTags ) {
 
 	$out .= "<!-- TAGS -->\n" .
 	simpleNav($blogTags->children('limit=12, start=0'),

@@ -38,7 +38,7 @@ if ($item->id == page('id')) {
 		<?= $title ?>
 		<p>
 			<?= icon('calendar', ['text_after' => $item->date]) ?>
-			<?= icon('user', ['text_after' => $nick_name]) ?>
+			<?= icon('user', ['text_after' => $nick_name ?: setting('update-profile')]) ?>
 			<?= countComments($item, ['icon' => icon('message-square')]) ?>
 		</p>
 	</header>

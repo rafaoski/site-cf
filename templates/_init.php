@@ -21,6 +21,7 @@ setting([
 	'logo_alt' => pages('options')->logo ? pages('options')->logo->description : '',
 	'favicon' => pages('options')->favicon ? pages('options')->favicon->url : '',
 	'site-name' => pages('options')->site_name,
+	'site-description' => pages('options')->site_description,
 	'background-image' => pages('options')->site_options->get("name=background-image"),
 	'gw-code' => pages('options')->site_options->get("name=gw-code"),
 	'ga-code' => pages('options')->site_options->get("name=ga-code"),
@@ -49,6 +50,7 @@ setting([
 	'to-any' => pages('options')->site_options->get("name=share-buttons"),
 	'rss-title' => __('Recent Posts'),
 	'rss-description' => __('The most recent pages updated on my site'),
+	'update-profile' => __('Update your nickname on your profile'),
 // Basic Translation
 	'lang-code' => __('en'),
 	'edit' => __('Edit'),
@@ -94,10 +96,10 @@ setting([
 	'contact-basicsucces' => __('Thanks %s, we just received your message ... We will try to reply to your e-mail ( %s ) as soon as possible.'),
 	'contact-advsubject' => __("Subject"),
 	'contact-advsucces' => __('Thanks %s, we just received your message ... We will try to reply to your e-mail ( %s ) or call you back ( %s ) as soon as possible.'),
-	'cotact-advoptionsfirst' => __("New Website"),
-	'cotact-advoptionsnext' => __("Something else"),
-	'cotact-advwhatcan' => __("What can we do for you"),
-	'cotact-advexpdate' => __("Expected start and end date"),
+	'contact-advoptionsfirst' => __("New Website"),
+	'contact-advoptionsnext' => __("Something else"),
+	'contact-advwhatcan' => __("What can we do for you"),
+	'contact-advexpdate' => __("Expected start and end date"),
 ]);
 
 include_once('./_func.php');

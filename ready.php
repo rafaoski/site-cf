@@ -88,68 +88,6 @@ wire()->addHookProperty('Page::intro', function($event) {
 	$event->return = $intro . ' ... ';
   });
 
-// https://processwire.com/talk/topic/19250-formbuilder-allow-html-in-label/
-// $wire->addHookAfter("InputfieldCheckbox::render",function($event){
-//     $field = $event->object;
-//     $output = $event->return;
-//     $policyUrl = pages()->get("template=privacy-policy")->url;
-//     if($field->name == "privacy_policy"){
-//         $output = str_replace("privacy policy","<a href='{$policyUrl}'>privacy policy</a>", $output);
-//     }
-//     $event->return = $output;
-// });
-
-// wire()->addHookAfter('InputfieldAsmSelect::render', function(HookEvent $event) {
-	// Get the object the event occurred on, if needed
-	// $InputfieldAsmSelect = $event->object;
-
-	// An 'after' hook can retrieve and/or modify the return value
-	// $return = $event->return;
-
-	/* Your code here, perhaps modifying the return value */
-
-	// Populate back return value, if you have modified it
-	// $event->return = 'asmSelectTest';
-
-//   });
-
-
-/** On-demand mirroring of remote web server files to your dev environment ( https://processwire.com/blog/posts/pw-3.0.137/  )*/
-// $wire->addHookAfter('Pagefile::url, Pagefile::filename', function($event) {
-
-// 	$config = $event->wire('config');
-// 	$file = $event->return;
-
-// 	if($event->method == 'url') {
-// 	  // convert url to disk path
-// 	  $file = $config->paths->root . substr($file, strlen($config->urls->root));
-// 	}
-
-// 	if(!file_exists($file)) {
-// 	  // download file from source if it doesn't exist here
-// 	  $src = 'https://domain.com/site/assets/files/';
-// 	  $url = str_replace($config->paths->files, $src, $file);
-// 	  $http = new WireHttp();
-// 	  $http->download($url, $file);
-// 	}
-//   });
-
-/** Define toolbar for a particular role ( https://processwire.com/talk/topic/17195-customise-ckeditor-toolbar-per-role/ ) */
-// wire()->addHookBefore('Field(name=body)::getInputfield', function(HookEvent $event) {
-// $field = $event->object;
-// if(wire()->user->hasRole('editor')) $field->toolbar = 'Format, Bold, Italic, -, NumberedList, BulletedList, Outdent, Indent';
-// $field->toolbar = 'Format, Bold, Italic, -, NumberedList, BulletedList, Outdent, Indent';
-// });
-
-/** https://processwire.com/docs/modules/hooks/ */
-// wire()->addHookProperty('Page::intro', function($event) {
-// 	$page = $event->object;
-// 	$intro = substr(strip_tags($page->body), 0, 255);
-// 	$lastPeriodPos = strrpos($intro, '.');
-// 	if($lastPeriodPos !== false) $intro = substr($intro, 0, $lastPeriodPos);
-// 	$event->return = $intro;
-//  });
-
 /** Custom filed body elemnt ( ul, li ) class */
 // $wire->addHookAfter('Pages::saveReady', function(HookEvent $event) {
 // 	$page = $event->arguments(0);
@@ -165,18 +103,6 @@ wire()->addHookProperty('Page::intro', function($event) {
 	// 			// "<li class='custom-class'>"
 	// 		],
 	// 	$page->body);
-
-	// 	// Replace ul class in hero field
-	// 	$page->hero_text = str_replace(
-		// 		[
-			// 			"<ul>",
-			// 			// "<li>"
-			// 		],
-			// 		[
-// 			"<ul class='list'>",
-// 			// "<li class='custom-class'>"
-// 		],
-// 	$page->hero_text);
 
 // 	// $event->message("You saved page $page->path");
 // });

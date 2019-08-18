@@ -2,5 +2,5 @@
 $info = array(
 	'title' => "CF / Site Profile", 
 	'summary' => "", 
-	'screenshot' => "cf-profile-compressor.png"
+	'screenshot' => "cf-site.png"
 	);

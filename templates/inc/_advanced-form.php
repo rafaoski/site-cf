@@ -118,7 +118,7 @@ $textCsrfFailed = setting('csrf-failed');
 	// Text field ( date https://flatpickr.js.org/getting-started/ ).
 	$f = modules()->get("InputfieldText");
 	$f->set("label", $textStartDate);
-	$f->set("description", setting('cotact-advexpdate'));
+	$f->set("description", setting('contact-advexpdate'));
 	$f->attr("name+id", "start_date");
 	$f->attr("maxlength", 50);
 	$f->attr("class", "form-control");
@@ -129,12 +129,12 @@ $textCsrfFailed = setting('csrf-failed');
 
 	// Select type field ( Subject ).
 	$options = [
-	'new_website' => setting('cotact-advoptionsfirst'),
-	'something_else' => setting('cotact-advoptionsnext')
+	'new_website' => setting('contact-advoptionsfirst'),
+	'something_else' => setting('contact-advoptionsnext')
 	];
 
 	$f = modules()->get("InputfieldSelect");
-	$f->set("label", setting('cotact-advwhatcan'));
+	$f->set("label", setting('contact-advwhatcan'));
 	$f->attr("name+id", "subject");
 	$f->attr("maxlength", 50);
 	$f->attr("class", "form-control");

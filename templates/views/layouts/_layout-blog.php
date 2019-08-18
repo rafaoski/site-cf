@@ -12,10 +12,10 @@ echo $noFound;
 
 	<?= $pagination ?>
 
-	<div class='content grid grid-gap-md text-component'>
+	<div class='grid grid-gap-md text-component'>
 
-		<!-- CONTENT -->
-		<div class='content__body col-8@md'>
+		<!-- BODY -->
+		<div class='body col-8@md'>
 
 			<?= $content ?>
 
@@ -28,8 +28,12 @@ echo $noFound;
 		</div>
 
 		<!-- SIDEBAR -->
-		<div class='content__sidebar col-4@md'>
+		<div class='sidebar col-4@md'>
+
 			<?= $sidebar ?>
+
+			<?= files()->render('views/blog/parts/_blog-sidebar.php') ?>
+
 		</div>
 
 	</div>

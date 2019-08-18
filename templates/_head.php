@@ -29,30 +29,7 @@ if( setting('gw-code') ) echo gwCode( setting('gw-code')->text_1 );
 				]);
 			?>
 
-			<div class='main-header__social-profiles margin-y-sm'>
-				<?= socialProfiles(pages()->get('/options/social-profiles/')->children()) ?>
-			</div>
-
-			<div class='main-header__privacy-policy text-sm'>
-				<?= privacyPolicy(pages()->get("template=privacy-policy")) ?>
-			</div>
-
-			<div class='flex flex-center flex-column'>
-
-				<div class='main-header__logo'>
-					<a  href='<?= setting('home')->url ?>'>
-						<img class='transition-bounce-s-r' src='<?= setting('logo') ?>'
-							style='width: 180px; filter: drop-shadow( 1px 2px 2px var(--color-black) );' alt='<?= setting('logo_alt') ?>'>
-					</a>
-				</div>
-
-				<p class='main-header__site-name text-xxxl' style='color: var(--color-contrast-lower)'>
-					<?= setting('site-name') ?>
-				</p>
-
-			</div>
-
-			<ul class='main-header__contact text-sm text-center margin-bottom-md'
+			<ul class='main-header__contact text-sm margin-y-md text-center'
 					style='overflow: auto; white-space: nowrap;'>
 				<?php // Options Nav
 				echo optionsNav(
@@ -72,6 +49,29 @@ if( setting('gw-code') ) echo gwCode( setting('gw-code')->text_1 );
 					]);
 				?>
 			</ul>
+
+			<div class='main-header__privacy-policy text-sm'>
+				<?= privacyPolicy(pages()->get("template=privacy-policy")) ?>
+			</div>
+
+			<div class='flex flex-center flex-column'>
+
+				<div class='main-header__logo'>
+					<a  href='<?= setting('home')->url ?>'>
+						<img class='transition-bounce-s-r' src='<?= setting('logo') ?>'
+							style='width: 180px; filter: drop-shadow( 1px 2px 2px var(--color-black) );' alt='<?= setting('logo_alt') ?>'>
+					</a>
+				</div>
+
+				<p class='main-header__site-name text-xxxl' style='color: var(--color-contrast-lower)'>
+					<?= setting('site-name') ?>
+				</p>
+
+				<p class='main-header__site-description text-md text-underline margin-bottom-sm' style='color: var(--color-contrast-medium)'>
+					<?= setting('site-description') ?>
+				</p>
+
+			</div>
 
 			<nav class='main-header__nav main-nav margin-y-sm'>
 				<?= navLinks() ?>
