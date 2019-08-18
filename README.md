@@ -25,32 +25,32 @@ https://codyhouse.co/license
 
 
   #### If you want to use Gulp stack you must first ensure that [Node.js](https://nodejs.org/en/download/) and [NPM](https://www.npmjs.com/get-npm) are installed on your machine.
-  Basic example to Debian and Ubuntu based Linux distributions:  
+  Basic example to Debian and Ubuntu based Linux distributions:
   #### Node.js
   curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
   sudo apt-get install -y nodejs
 
-  See more installation options [LINK](https://nodejs.org/en/download/package-manager/)  
+  See more installation options [LINK](https://nodejs.org/en/download/package-manager/)
   #### npm is installed with Node.js just check in linux terminal like below:
-  <code>node -v</code>  
+  <code>node -v</code>
   <code>npm -v</code>
 
-  #### Set BrowserSync inside <code>gulpfile.js</code> as below:    
-  only change your <code>var siteUrl = 'http://cf.test/';</code> to your ProcessWire development url like:  
-  <code>siteUrl = 'http://localhost/processwire-site.test/';</code>  
+  #### Set BrowserSync inside <code>gulpfile.js</code> as below:
+  only change your <code>var siteUrl = 'http://cf.test/';</code> to your ProcessWire development url like:
+  <code>siteUrl = 'http://localhost/processwire-site.test/';</code>
 
-  Next install npm packages in your templates folder with command <code><b>npm install</b></code>  
+  Next install npm packages in your templates folder with command <code><b>npm install</b></code>
 
-  Now, boot up the dev server <code><b>gulp watch</b></code>, and you're all set go!  
+  Now, boot up the dev server <code><b>gulp watch</b></code>, and you're all set go!
 
   #### Simple Usage ( Basic Command )
   <ul>
   <li><b>Install</b> <code>npm install</code></li>
-  <li><b>Watch</b> <code>gulp watch</code></li>  
+  <li><b>Watch</b> <code>gulp watch</code></li>
   </ul>
 
-  You can now add components from [CodyHouse Components](https://codyhouse.co/ds/components).    
-  Learn more about how to add components https://www.youtube.com/watch?v=8NLRhaSnQS0  
+  You can now add components from [CodyHouse Components](https://codyhouse.co/ds/components).
+  Learn more about how to add components https://www.youtube.com/watch?v=8NLRhaSnQS0
 
   #### Folder With all SCSS files is inside assets/css
 
@@ -60,14 +60,14 @@ https://codyhouse.co/license
 [Feather Icons](https://feathericons.com/)
 
 #### All images ( svg ) on the pages come from:
-[Icofont](https://icofont.com/)
+[Icofont](https://icofont.com/)<br>
 [Simpleicons ( ProcessWire Logo ) ](https://simpleicons.org/?q=processwire)
 
 #### References:
-[CodyHouse Framework](https://codyhouse.co/ds/docs/framework)  
-[AddToAny - Universal Sharing Buttons](https://www.addtoany.com/)  
-[Feather Icons](https://feathericons.com/)  
-[Flatpickr](https://flatpickr.js.org/)  
+[CodyHouse Framework](https://codyhouse.co/ds/docs/framework)
+[AddToAny - Universal Sharing Buttons](https://www.addtoany.com/)
+[Feather Icons](https://feathericons.com/)
+[Flatpickr](https://flatpickr.js.org/)
 
 ####  License
 2019 byHumans under the [MIT license](LICENSE).
